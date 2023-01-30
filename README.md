@@ -1,2 +1,2 @@
 # SnakeGame
-Simple Snake Game
+Simple Snake Game made with Turtle module.
