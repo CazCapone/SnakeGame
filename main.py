@@ -37,20 +37,19 @@ while is_running:
         food.refresh()
         snake.extend()
         board.add_score()
-    
 
     # Collision detection
-    if (snake.head.xcor() > 290 
-        or snake.head.xcor() < -290 
+    if (snake.head.xcor() > 280 
+        or snake.head.xcor() < -280 
         or snake.head.ycor() > 280 
-        or snake.head.ycor() < -290): 
-        is_running = False
-        board.game_over()
+        or snake.head.ycor() < -280): 
+        board.reset()
+        snake.reset()
 
     for p in snake.snake_parts[1:]:
         if snake.head.distance(p) < 10:
-            is_running = False
-            board.game_over() 
+            board.reset()
+            snake.reset()
 
 
 
